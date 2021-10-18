@@ -1,0 +1,21 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90px;
+    .pagination__dots {
+        display: flex;
+        justify-content: space-between;
+        width: 30px;
+        .pagination__dot {
+            height: 11px;
+            width: 11px;
+            border: 2px solid black;
+            border-radius: 50%;
+            &._active {
+                background: #fc6da9;
+                border: none;
+            }
+        }
+    }
+}

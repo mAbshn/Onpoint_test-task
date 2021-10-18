@@ -1,0 +1,90 @@
+@font-face {
+    font-family: Gilroy-Extrabold;
+    src: url(../fonts/Gilroy-Extrabold.ttf);
+}
+@font-face {
+	font-family: DINpro;
+	src: url(../fonts/DINPro.ttf);
+}
+
+#page2 {
+    position: absolute;
+    transform: translateY(-107%);
+}
+
+.slide3__popup-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(#16273e, 0.7);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    &._active {
+        visibility: visible;
+        opacity: 1;
+    }
+    .slide3__popup {
+        position: absolute;
+        top: 124px;
+        left: 141px;
+        padding: 38px 50px 0 210px;
+        width: 820px;
+        height: 573px;
+        background: white;
+        border-radius: 40px;
+        .slide3__popupBrend {
+            position: relative;
+            left: -5px;
+        }
+        .slide3__list {
+            margin-top: 21px;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.2s;
+            &._active {
+                visibility: visible;
+                opacity: 1;
+            }
+            .slider3__listNumber {
+                margin-top: 15px;
+                font-family: Gilroy-Extrabold;
+                font-size: 25px;
+                color: #8cc9e8;
+            }
+            .slider3__listText {
+                margin-top: 5px;
+                font-family: DINpro;
+                font-size: 25px;
+            }
+        }
+        .slide3__close {
+            position: absolute;
+            right: 26px;
+            width: 44px;
+            height: 44px;
+            top: 27px;
+            z-index: 2;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 21px;
+                width: 44px;
+                height: 3px;
+                background-color: black;
+                transform: rotate(45deg);
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 21px;
+                width: 44px;
+                height: 3px;
+                background-color: black;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

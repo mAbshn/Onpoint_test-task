@@ -1,0 +1,57 @@
+@font-face {
+	font-family: Circe;
+	src: url(../fonts/circe.ttf);
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	.slider {
+        display: flex;
+		height: 100vh;
+		width: calc(100vw * 3);
+		background: url(../img/background.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+        transition: 0.5s;
+	}
+    .slider__home {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 66px;
+        top: 25px;
+        .slider__home-img {
+            width: 46px;
+            height: 20px;
+            padding-right: 21px;
+        }
+        .slider__home-text {
+            padding: 1px 0 1px 23px;
+            font-family: Circe;
+            text-transform: uppercase;
+            font-size: 16.5px;
+            color: black;
+            letter-spacing: 2px;
+            border-left: 2px solid rgba(black, 0.7);
+            transform: translateY(2px);
+        }
+    }
+    .slider__logo {
+        position: absolute;
+        bottom: 13px;
+        left: 69px;
+    }
+}
